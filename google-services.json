@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "390699885705",
+    "firebase_url": "https://school-app-6d4e7.firebaseio.com",
+    "project_id": "school-app-6d4e7",
+    "storage_bucket": "school-app-6d4e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390699885705:android:71714b28cd97ca47",
+        "android_client_info": {
+          "package_name": "com.ibluesys.parent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390699885705-a00amhels3vjrhr7f26ad4lij5c6p95p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmFIKpuqF0QVEPu1511nWTt_EVZTKxLgQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,18 +1,40 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+  <ion-navbar color="primary">
+  <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
+     <ion-buttons end>
+      <button ion-button icon-only color="royal">
+            <ion-icon name="md-notifications"> <ion-badge  color="dark" item-end>{{notifications}}</ion-badge></ion-icon>
+      </button>
+      <button ion-button icon-only color="royal" (click)="showMore()">
+        <ion-icon name="md-more" ></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-content>
+  <div class="row">
+          <div class="col col-50">
+       
+              <img src="{{base_url}}uploads/profile_pics/{{currentstudent.profile_pic}}"  id="profileImage"  class="newprofilepic animated fadeInLeft item-remove-animate">
+          </div>
+              <div class="col col-50">
+                  <div class='studinfo'>
+                   <span class="animated fadeInDown item-remove-animate studentname">{{currentstudent.std_name}} {{currentstudent.std_middle_name}} {{currentstudent.std_last_name}}</span><br/>
+                   <div class="animated fadeInRight item-remove-animate schoolname">{{currentstudent.school.sch_name}}</div> 
+                   <div class="animated fadeInRight item-remove-animate classname">{{currentstudent.classes.class_name}} , {{currentstudent.division.div_name}}</div> 
+                   
+                   
+                   
+              </div>
+    </div>
+  </div>
+  <div class="row">
+     <div class="col col-50 attendance"> {{present}} <br/> Present </div>
+     <div class="col col-50 attendance"> {{absent}} <br/>Absent  </div>
+  </div>
+  <div id="container" class="item item-text-wrap graph" ></div>
 </ion-content>

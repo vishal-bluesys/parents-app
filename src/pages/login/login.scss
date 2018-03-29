@@ -1,0 +1,29 @@
+page-login {
+ 
+ion-content{
+   
+        background-size: cover;
+        background-image: url(../assets/imgs/loginbg.png);
+
+      }
+
+ form{
+ 	margin-top:360px;
+
+ }    
+
+.item-md{
+ 	       
+ 	       background-color: unset;
+ } 
+
+ ion-input{
+
+ 	    background-color: #d6185d0f;
+ }
+ .error{
+
+ 	color:white;
+ 	margin-left: 10px;
+ }
+}

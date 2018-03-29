@@ -1,0 +1,43 @@
+<!--
+  Generated template for the GalleryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar  color="primary">
+  	 <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Gallery</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()"></ion-refresher>
+        <div class="row" style="margin-top: 100px; text-align: center" *ngIf="!albums.length">
+            <div class="col">
+                No images...
+            </div>
+        </div>
+
+        <div class="row galleries-list" *ngFor="let items of albums" >
+            <div class="col col-50" *ngFor="let item of items"  (click)="gotoGalleryPage(item.Id,item.title)">
+                <div class="gallery" >
+                     <span class="gallery-title">
+                        {{item.title}}
+                    </span>
+                  <!--  <img class="gallery-image" src="{{item.src}}"/>-->
+                    <img src="{{url}}{{item.title}}_{{currentStudent.std_sch_id}}/{{item.src}}" class="gallery-image" >
+                    <div class="gallery-bg"></div></div>
+                   <!-- <span class="gallery-footer" ng-click="delete(item)">
+                        <i class="ionic ion-ios-trash-outline"></i>
+                    
+                </span>-->
+            </div>
+        </div>
+
+</ion-content>
